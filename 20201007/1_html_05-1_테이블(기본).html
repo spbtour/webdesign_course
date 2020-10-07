@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>표 만들기</h1>
+    <h2>1행 1열 표 만들기</h2>
+    <table border="1">
+        <tr>
+            <td>1행 1열</td>
+        </tr>
+    </table>
+    <h2>1행 2열 표 만들기</h2>
+    <table border="1">
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+        </tr>
+    </table>
+    <h2>2행 1열 표 만들기</h2>
+    <table border="1">
+        <tr>
+            <td>1행 1열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+        </tr>
+    </table>
+    <h2>2행 2열 표 만들기</h2>
+    <table border="1">
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+        </tr>
+    </table>
+    <h2>3행 3열 표 만들기</h2>
+    <table border="1">
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+        <tr>
+            <td>3행 1열</td>
+            <td>3행 2열</td>
+            <td>3행 3열</td>
+        </tr>
+    </table>
+    <h2>3행 3열 표 만들기 - 병합</h2>
+    <table border="1">
+        <tr>
+            <td colspan="2">1행 1열</td>
+<!--            병합된 열은 삭제-->
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td rowspan="2">2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+        <tr>
+            <td>3행 1열</td>
+            <td>3행 3열</td>
+<!--            병합된 행은 삭제-->
+        </tr>
+    </table>
+</body></html>
