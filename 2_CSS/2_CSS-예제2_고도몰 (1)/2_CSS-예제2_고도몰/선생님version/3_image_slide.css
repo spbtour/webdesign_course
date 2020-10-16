@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+}
+
+/*두 개 이상의 선택자는 콤마(,)로 구분*/
+section > h1,
+article > h3 {
+  width: 1110px;
+  margin: 20px auto;
+}
+
+article {
+  width: 100%;
+}
+
+article > div {
+  min-width: 1110px;
+  height: 393px;
+  overflow: hidden;
+  /*영역을 벗어난 이미지가 보이지 않도록*/
+}
+article > div > ul {
+  width: 300%;
+  position: relative;
+  /*상위요소를 기준으로*/
+  left: 0;
+  animation: slide 10s infinite;
+  /*움직임: 이름 시간 반복횟수*/
+  /*animation은 @keyframes와 세트*/
+}
+/*@keyframes 애니메이션이름*/
+@keyframes slide {
+/*
+  from {left: 0;}
+  to {left: -200%;}
+*/
+  0% {left:0;}
+  20% {left: 0;}
+  33% {left: -100%;}
+  53% {left: -100%;}
+  66% {left: -200%;}
+  86% {left: -200%;}
+}
+article > div > ul > li {
+  width: 33.333%;
+  height: 393px;
+  float: left;
+}
+
+article > div > ul > li:nth-child(1) {
+  background: url(../images/image_slide_1.jpg) center no-repeat;
+  /*백그라운드 축약 속성: 속성을 순서없이 입력하되 반드시 띄어쓰기 해야합니다.(단, url과()는 하나의 속성이므로 반드시 붙여써야합니다.*/
+}
+
+article > div > ul > li:nth-child(2) {
+  background: url(../images/image_slide_2.jpg) center no-repeat;
+}
+
+article > div > ul > li:nth-child(3) {
+  background: url(../images/image_slide_3.jpg) center no-repeat;
+}

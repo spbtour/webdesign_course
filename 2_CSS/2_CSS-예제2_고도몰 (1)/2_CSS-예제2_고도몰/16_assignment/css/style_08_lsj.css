@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ddd;
+}
+
+li {
+    list-style: none;
+}
+
+#hidden {
+    visibility: none;
+    height: 0;
+    width: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+header {
+    margin: 30px auto 0 auto;
+    width: 1110px;
+    display: block;
+    height: 52px;
+}
+
+#logo-top {
+    width: auto;
+    height: auto;
+    float: left;
+}
+
+#gnb {
+    width: auto;
+    float: right;
+    height: 52px;
+}
+
+#gnb > ul > li {
+    float: left;
+    list-style: none;
+    padding: 10px;
+    position: relative;
+}
+
+#gnb > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+#gnb > ul > li > a:hover {
+    color: darkgrey;
+}
+
+#gnb > ul > li:before {
+    content: "";
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    background-color: #ddd;
+    left: -1px;
+    top: 13px;
+}
+
+nav {
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+#lnb {
+    width: 1110px;
+    margin: 0 auto;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: none;
+    transition: all 0.7s ease-in-out;
+    position: relative;
+    z-index: 5
+}
+
+#lnb:hover {
+    height: 280px;
+    background-color: rgba(201, 176, 50. 0.5);
+}
+/*메뉴 뜨면 색 바뀌게 하자*/
+
+#lnb > ul > li {
+    float: left;
+    padding: 0 15px;
+}
+
+#contentwrap {
+    width: 100%;
+    height: auto;
+/*    border-bottom: 5px solid black;*/
+}
+
+
+section {
+    width: 100%;
+}
+
+section > h1,
+article > h3 {
+    width: 1110px;
+    margin: auto;
+}
+
+article {
+    width: 100%;
+    border-bottom: 5px solid black;
+}
+
+article > div {
+    min-width: 1110px;
+    height: 393px;
+    overflow: hidden;
+}
+
+article > div > ul {
+    width: 300%;
+    position: relative;
+    left: 0;
+    animation: slide 10s infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+
+    33% {
+        left: -100%;
+    }
+
+    53% {
+        left: -100%;
+    }
+
+    66% {
+        left: -200%;
+    }
+
+    86% {
+        left: -200%;
+    }
+}
+
+article > div > ul > li {
+    width: 33.333%;
+    height: 393px;
+    float: left;
+}
+
+article > div > ul > li {
+    width: 33.3%;
+    float: left;
+    height: 393px;
+
+
+}
+
+article > div > ul > li:nth-child(1) {
+    background-image: url(/images/image_slide_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+article > div > ul > li:nth-child(2) {
+    background-image: url(/images/image_slide_2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+article > div > ul > li:nth-child(3) {
+    background-image: url(/images/image_slide_3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+aside{
+    width: 1110px;
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: space-around
+}
+aside > div{
+    background-color: black;
+    height: 130px;
+}
+aside > div > div:hover{
+    opacity: 0.7;
+}
+main > div{
+    height: 304px;
+}
+/*    나중에 transition 도 넣자*/
+
+#upslide{
+    width: 1110px;
+    margin: 0 auto;
+}
+#upslide > ul > li{
+    height: 304px;
+    float: left;
+    width: 265px;
+    overflow: hidden;
+}
+
+#upslide > ul > li:nth-child(1) {
+    background-image: url(/images/product_01.jpg);
+    background-repeat: no-repeat;
+    padding-right: 16px;
+}
+#upslide > ul > li:nth-child(2) {
+    background-image: url(/images/product_02.jpg);
+    background-repeat: no-repeat;
+    padding-right: 17px;
+}
+#upslide > ul > li:nth-child(3) {
+    background-image: url(/images/product_03.jpg);
+    background-repeat: no-repeat;
+    padding-right: 16px;
+}
+#upslide > ul > li:nth-child(4) {
+    background-image: url(/images/product_04.jpg);
+    background-repeat: no-repeat;
+}
+
+.text{
+    position: relative;
+    top: 135%;
+    transition: all 0.7s ease-in-out;
+}
+#upslide > ul > li:hover .text{
+    top: 35%;
+}
+#upslide > ul > li:hover .text >ul{
+    background-color: black;
+}
+.text > li {
+    position: relative;
+    left: 35%;
+}
+.text > li:nth-child(1){
+    font-size: 15px;
+}
+.text > li:nth-child(2){
+    font-size: 15px;
+}
+.text > li:nth-child(3){
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+

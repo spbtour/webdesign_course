@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+}
+
+section > h1,
+aside > h3 {
+  width: 1110px;
+  margin: 20px auto;
+}
+
+aside {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+aside > ul {
+  width: 1110px;
+  height: 130px;
+  display: flex;
+  /*하위개체를 가변형으로 설정 - 간격을 자동설정하기 위해 사용*/
+  justify-content: space-between;
+  /*flex하위 요소들간의 간격을 일정하게*/
+}
+
+aside > ul > li {
+  width: 270px;
+  height: 130px;
+  list-style: none;
+  background: #000;
+}
+
+aside > ul > li > a {
+  transition: all 0.5s ease-in-out;
+  /*투명도 등의 변화: 모든속성 시간 스타일*/
+}
+
+aside > ul > li > a:hover {
+  opacity: 0.5;
+}

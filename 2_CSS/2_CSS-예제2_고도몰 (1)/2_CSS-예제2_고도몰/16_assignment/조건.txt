@@ -1,0 +1,7 @@
+lnb - mouse over 하위 메뉴 drop down all
+
+main_banner - image slide ( 자동)
+
+banner - mouse over 투명도 설정
+
+product mouse over 슬라이드 업 버튼

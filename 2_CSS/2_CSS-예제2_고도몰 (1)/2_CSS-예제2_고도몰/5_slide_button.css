@@ -1,0 +1,120 @@
+@charset "UTF-8";
+*{
+    margin:0;
+    padding: 0;
+}
+section {
+    width: 100%;
+}
+section > h1{
+    width: 1110px;
+    margin: 20px auto;
+}
+article{
+    width: 1110px;
+    height: 334px;
+/*    background: #ddd;*/
+    margin: 0 auto;
+}
+article > h3 {
+    width: 1110px;
+    height: 30px;
+/*    background: #aaa;*/
+}
+article > ul{
+    width: 1110px;
+    height: 304px;
+    display: flex;
+    justify-content: space-between;
+}
+article > ul > li {
+    width: 265px;
+    height: 304px;
+    list-style: none;
+    overflow: hidden;
+}
+article > ul > li:nth-child(1){
+    background: url(images/product_01.jpg);
+    list-style: none;
+}
+article > ul > li:nth-child(2){
+    background: url(images/product_02.jpg);
+    list-style: none;
+}
+article > ul > li:nth-child(3){
+    background: url(images/product_03.jpg);
+    list-style: none;
+}
+article > ul > li:nth-child(4){
+    background: url(images/product_04.jpg);
+    list-style: none;
+}
+.text {
+    width: 265px;
+    height: 304px;
+    background: rgba(0,0,0,.5);
+    position: relative;
+    top: 304px;
+        transition: all 0.5s ease-in-out;
+}
+.text a {
+    position: relative;
+        top: 90px;
+    color: #ccc;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    width: 265px;
+/*    문자의 세로 정렬을 위해 사용 - */
+    vertical-align: middle;
+/*    세로정렬: 중앙(table-cell안에서 유효)*/
+/*    display: block;*/
+/*
+    a tag는 inline이라서 text-algin  하면 안먹고
+    display: block; 으로 바꿔놔야 됨
+*/
+}
+.text > li:nth-child(1) a{
+    height: 30px;
+    font: bold 14px/1.2 '나눔 고딕';
+}
+.text > li:nth-child(2) a{
+    height: 30px;
+    font: bold 16px '나눔 고딕';
+}
+.text > li:nth-child(3) a{
+    height: 50px;
+    font: 12px '나눔 고딕';
+}
+.text a:hover{
+    color: #fff;
+}
+article > ul > li:hover .text{
+    top: 0;
+    
+}
+
+/*transform 을 이용한 중앙정렬*/
+aside {
+    width: 1110px;
+    margin: 50px auto;
+}
+aside #box{
+    width: 1110px;
+    height: 500px;
+    background: #ddd;
+}
+aside #center{
+    width: 500px;
+    height: 200px;
+    background: #000;
+    color: aliceblue;
+    text-align: center;
+    font: bold 30px/200px '';
+/*    여기서부터 중앙정렬*/
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+/*   개체의 크기만큼, 높이만큼 translate translate(x,y);*/
+}

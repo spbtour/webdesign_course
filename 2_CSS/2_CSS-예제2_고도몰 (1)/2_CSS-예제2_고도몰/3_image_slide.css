@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    width: 100%;
+}
+section > h1, 
+article > h3 {
+    width: 1110px;
+    margin: 20px auto;
+}
+article {
+    width: 100%;
+}
+article > div {
+    min-width: 1110px;
+    height: 393px;
+    overflow: hidden;
+/*    영억을 벗어난 이미지가 보이지 않도록*/
+}
+article > div > ul{
+    width: 300%;
+/*    상위 요소의 300%*/
+/*아티클이 100이고 ul 은 3배(그림 3개 다 넣으려고)*/
+    position: relative;
+/*   position은 상위요소를 기준*/
+    left: 0;
+    animation: slide 10s infinite;
+/*        움직임: 이름, 시간, 반복 횟수*/
+/*    animation은 @keyframes 와 세트*/
+    @keyframes slide {
+/*
+        from{
+            left: 0;
+        }
+        to {
+            left: -200%;
+        }
+        */
+        0% {left:0;}
+        20% {left: 0;}
+        33% {left: -100%;}
+        53% {left: -100%;}
+        66% {left:-200%;}
+        86% {left: -200%;}
+    }
+
+}
+article > div > ul > li {
+    width: 33.333%;
+/*    그냥 width를 %로 하면 상위 300% * % 를 함*/
+    height: 393px;
+    float: left;
+}
+article > div > ul > li:first-child{
+    background: url(images/image_slide_1.jpg) center no-repeat;
+/*    background abridged attribute : order no matter but space between attributes needed*/
+}
+article > div > ul > li:nth-child(2){
+    background: url(images/image_slide_2.jpg) center no-repeat;
+}
+article > div > ul > li:nth-child(3){
+    background: url(images/image_slide_3.jpg) center no-repeat;
+}

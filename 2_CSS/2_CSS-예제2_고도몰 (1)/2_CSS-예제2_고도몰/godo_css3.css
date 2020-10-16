@@ -1,0 +1,223 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: '나눔고딕', '맑은 고딕', '돋움';
+}
+a:hover {
+  color: #ddd;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.hidden{
+    visibility:hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+li{
+    list-style: none;
+/*    리스트 앞에 점 제거*/
+    float:left;
+}
+
+header{
+/*    background-color: red;*/
+    width: 1110px;
+    height: 52px;
+    margin: 40px auto;
+}
+
+}
+#header > div{
+/*    float: left;*/
+}
+#logo{
+    width: 253px;
+    height: 52px;
+    float: left;
+}
+#header_right{
+    width: 857px;
+    height: 52px;
+/*    background-color: darkred;*/
+    float:right;
+}
+#gnb{
+    float:right;
+    border-left: 1px solid #ddd;
+}
+#gnb a{
+    border-right: 1px solid #ddd;
+    padding: 0 10px;
+    display: block;
+    line-height: 15px;
+}
+
+#lnb{
+    width: 100%;
+    height: 40px;
+/*    background-color: skyblue;*/
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #ddd;
+}
+#lnb > ul{
+    width: 1110px;
+    margin: 0 auto;
+}
+#lnb a{
+    padding: 0 20px;
+    display: block;
+    line-height: 40px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+section{
+    width: 100%;
+/*    background-color: green;*/
+}
+#contentwrap{
+/*    margin: 0 auto;*/
+/*the one above, I was checking how to get thigns in the middle*/
+    border-bottom: 1px solid black;
+}
+#main_banner{
+    width: 100%;
+    height: 393px;
+    border-bottom: 2px solid black;
+/*
+    background-color: grey;
+    background-image: url(/images/image_slide_1.jpg);
+    min-width: 1110px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+*/
+}
+#main_banner >div{
+    background-image: url(/images/image_slide_1.jpg);
+    min-width: 1110px;
+   height: 393px;
+    background-position: center;
+    background-repeat: no-repeat;
+/*    border-bottom: 2px solid black;*/
+}
+#main_banner > a {
+    min-width: 1110px;
+    margin: 0 auto;
+}
+#banner{
+    width: 1110px;
+    height: 130px;
+    margin: 20px auto;
+/*    background-color: yellow;*/
+}
+#banner > ul > li {
+    margin-right: 10px;
+}
+#banner > ul > li:last-child{
+    margin-right: 0px;
+}
+
+#best{
+    width: 1110px;
+    height: 334px;
+    margin: 0 auto 20px auto;
+    
+/*    background-color: purple;*/
+}
+#best > ul > li{
+  width: 265px;
+  height: 304px;
+  background-color: #d9a9a9;
+  margin-top:15px;
+}
+#best > ul > li:nth-child(1){
+    background-image: url(/images/product_01.jpg);
+    margin-right: 16px;
+}
+
+#best > ul > li:nth-child(2){
+    background-image: url(/images/product_02.jpg);
+    margin-right: 17px;
+}
+
+#best > ul > li:nth-child(3){
+    background-image: url(/images/product_03.jpg);
+    margin-right: 17px;
+}
+
+#best > ul > li:nth-child(4){
+    background-image: url(/images/product_04.jpg);
+    margin-right: 0px;
+}
+
+#best >h3{
+    font-size: 16px;
+    font-weight: normal;
+}
+#bottom_logo{
+    width: 253px;
+    height: 70px;
+    margin-top: 30px;
+/*    background-color: green;*/
+}
+
+#footer_right{
+    width: 857px;
+    height: 100px;
+/*    background: red;*/
+}
+#fnb{
+    width: 857px;
+    height: 30px;
+}
+
+#fnb a{
+    display: block;
+    padding: 0 20px 0 0;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+#address{
+    width: 857px;
+    height: 70px;
+/*    background-color: blue;*/
+/*    font-style: normal;*/
+}
+
+#address > address{
+    font-style: normal;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+#address > address > a{
+    font-weight: bold;
+    font-size: 13.5px;
+}
+#address > small{
+ font-size: 8px; 
+ line-height: 32px;
+}
+#address > small > a{
+   font-weight: bold; 
+}
+footer{
+    width: 1110px;
+    height: 100px;
+    margin: 0 auto;
+}
+footer > div{
+    float: left;
+}
+/*마지막에 라인 넣는거 footer를 wrap 하는 div 하나 만들고 설정 하거나
+contentswrap id 지정해놓은거 밑에 보더 넣어도 됨.

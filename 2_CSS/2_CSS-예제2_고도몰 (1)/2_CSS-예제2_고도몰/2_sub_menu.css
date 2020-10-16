@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ddd;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+    overflow: hidden;
+/*    높이 자동 인식*/
+}
+section > article {
+  position: relative;
+  top: 52px;
+  /*Y값에서 위에 있는 요소 중에 absolute 설정을 한 요소의 높이만큼 설정*/
+  z-index: -1;
+  /*Z값 설정: 기본은 0*/
+}
+section > h1 {
+  width: 1110px;
+  margin: 50px auto 20px auto;
+}
+
+nav {
+  width: 100%;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #000;
+  height: 50px;
+  position: absolute;
+}
+
+nav > ul {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+nav > ul > li {
+  float: left;
+  padding: 0 15px;
+  position: relative;
+}
+
+nav > ul > li > a {
+  display: block;
+  height: 50px;
+  font: bold 16px/50px '나눔 고딕';
+}
+
+.sub > li > a {
+  display: block;
+  height: 30px;
+  font: normal 16px/30px '나눔 고딕';
+}
+
+.sub {
+  
+  position: absolute;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+/*직계하위메뉴*/
+#display_li .sub{
+  display: none;
+}
+
+#display_li > ul > li:hover .sub {
+  display: block;
+}
+
+
+/*하위 메뉴 전체*/
+#display_ul .sub{
+    display: none;
+}
+#display_ul > ul:hover .sub {
+    display: block;
+}
+/*이상하게 위에건 안되네*/
+/*
+아.. 선생님이 한거랑 내가 한거랑 ul 구조가 달랐음.
+선생님은 전체 ul 하나를 하고, 내부 ul 4개
+나는 내부 ul 4개에 각각 또 ul을 해서 안됨
+*/
+
+
+/*slide down*/
+#down .sub{
+    height: 0;
+    overflow: hidden;
+/*    영역을 벗어나는 요소 안보임 - 넘치는 것은 안보이게 됨*/
+    opacity: 0;
+/*    불투명도 : 0*/
+    transition: all 0.5s ease-in-out;
+}
+#down > ul > li:hover .sub{
+    height: 120px;
+    opacity: 1;
+    
+/*    변화과정    all   써있는 부분은 변화가 될 거를 선택 opacity 나 height 도 넣을 수 있음*/
+}
+

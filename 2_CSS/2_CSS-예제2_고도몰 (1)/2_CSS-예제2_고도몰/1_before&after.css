@@ -1,0 +1,60 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    float: left;
+}
+#gnb {
+    width: 800px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+#gnb ul{
+    float:right;
+    margin: 20px;
+}
+#gnb ul li{
+    position: relative;
+/*    상대적인 위치 - 하위 요소가 absolute 일때 하위 요소의 기준이 됨*/
+}
+#gnb ul li::after{
+    content: "ff";
+/*        가상 클라스 after의 기본 형식
+    콘텐츠 : 있다 - 자세한 사항은 아래에*/
+    width: 1px;
+    height: 6px;
+    background-color: red;
+    position: absolute;
+/*
+    위치 절대적인 값 - 상위 요소에 relative 가 있으면 상위 요소가
+    기준이 됨
+*/
+    right: 0px;
+    top: 3px;
+}
+#gnb ul li:last-child:after{
+    content: none;
+/*    마지막 after 요소 삭제*/
+    
+}
+#gnb a{
+    display:block;
+    height: 12px;
+    font-size: 12px;
+    font: normal 12px/1 '나눔 고딕';
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+/*    폰트속성축약: 두께 크기/행간 '서체'*/
+/*    must be in order and 글꼴과 크기는 생략 불가*/
+/*
+    font-style: none;
+    line-height: 1;
+*/
+}
+#gnb ul li:last-child a{
+    padding-right: 0;   
+}

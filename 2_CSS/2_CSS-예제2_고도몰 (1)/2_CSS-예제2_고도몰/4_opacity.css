@@ -1,0 +1,39 @@
+@charset="UTF-8";
+
+*{
+    margin:0;
+    padding: 0;
+}
+section {
+    width: 100%;
+}
+section > h1,
+aside > h3 {
+    width: 1110px;
+    margin: 20px auto;
+}
+aside {
+    width: 1110px;
+    margin: 0 auto;
+}
+aside > ul{
+    width: 1110px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+/*    overflow: hidden;*/
+}
+aside > ul > li{
+    width: 270px;
+    height: 130px;
+    list-style:none;
+    background-color: #000;
+/*    float: left;*/
+}
+aside > ul > li > a {
+        transition: all 0.5s ease-in-out;
+}
+aside > ul > li > a:hover{
+    opacity: 0.5;
+
+}
